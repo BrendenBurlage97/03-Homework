@@ -138,13 +138,14 @@ var upperCasedCharacters = [
       str = str + numericCharacters;
     }
   }
-  var passwordLength = prompt("Make the character no less than 8, and no more than 128.");
+  var passwordPrompt = prompt("Make the number of characters no less than 8, and no more than 128.");
+  var passwordLength = str.length;
 
   if (passwordLength = (8 > passwordLength && passwordLength < 128)) {
-          
-          display: str;
+
+          str.join(" ");
   } else {
-    display:"please submit a value for the password based off the criteria you've selected."
+    return "please submit a value for the password based off the criteria you've selected."
   }
   
 
