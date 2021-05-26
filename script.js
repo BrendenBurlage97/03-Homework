@@ -7,11 +7,8 @@
 // 7. When the password is generated, I am then met with an alert of the password name, and/or a display of it in the textbox.
 
 
-
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
 
 // Write password to the #password input
 function writePassword() {
@@ -103,6 +100,13 @@ var upperCasedCharacters = [
   'Y',
   'Z',
 ];
+
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+}
   var strLowerCased = prompt("Do you want lower cased letters? y/n");
 
   if (strLowerCased = "y") {
@@ -139,22 +143,22 @@ var upperCasedCharacters = [
     }
   }
   var passwordPrompt = prompt("Make the number of characters no less than 8, and no more than 128.");
+
   var passwordLength = str.length;
 
   if (passwordLength = (8 > passwordLength && passwordLength < 128)) {
-
           str.join(" ");
   } else {
     return "please submit a value for the password based off the criteria you've selected."
   }
   
-
-
-  //var password = generatePassword();
-  //var passwordText = document.querySelector("#password");
-  //passwordText.value = password;
+ var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 //if (passwordLength
+
+ 
